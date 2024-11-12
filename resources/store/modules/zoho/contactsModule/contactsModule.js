@@ -4,12 +4,12 @@ export const ContactsModule = {
         zohoContact: {},
     }),
     mutations: {
-        seZohotContact(state, zohoContact) {
+        seZohoContact(state, zohoContact) {
             state.zohoContact = zohoContact;
         }
     },
     actions:{
-        async getContactById({state, commit}, contactId) {
+        async getZohoContactById({state, commit}, contactId) {
             let contact = await ZOHO.CRM.API.getRecord({Entity:"Contacts",RecordID:contactId});
             if (contact.data?.[0]) {
                 console.log("Contact Found, set:", contact.data[0]);
