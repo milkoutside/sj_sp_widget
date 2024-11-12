@@ -25,7 +25,7 @@ export default {
   methods: {
     ...mapActions({
       getMessagesByZohoContactId: 'repositories/contacts/getMessagesByZohoContactId',
-      getZohoContactById: 'zoho/contacts/getContactById',
+      getZohoContactById: 'zoho/contacts/getZohoContactById',
     }),
     ...mapMutations({
       startSpinner: 'spinner/startSpinner',
