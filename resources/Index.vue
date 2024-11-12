@@ -25,12 +25,12 @@ export default {
   methods: {
     ...mapActions({
       getMessagesByZohoContactId: 'repositories/contacts/getMessagesByZohoContactId',
-      getContactById: 'zoho/contacts/getContactById',
+      getZohoContactById: 'zoho/contacts/getContactById',
     }),
     ...mapMutations({
       startSpinner: 'spinner/startSpinner',
       stopSpinner: 'spinner/stopSpinner',
-      seZohotContact:'zoho/contacts/seZohotContact',
+      seZohoContact:'zoho/contacts/seZohotContact',
       setMessages:'repositories/contacts/setMessages'
     }),
     async init() {
@@ -39,9 +39,9 @@ export default {
         this.startSpinner();
         let contactId = data.EntityId;
         console.log("contact id",contactId)
-        let contact = await this.getContactById(contactId);
+        let contact = await this.getZohoContactById(contactId);
        // let contactMessages = await this.getMessagesByZohoContactId(contactId);
-        this.setContact(contact);
+        this.seZohoContact(contact);
        // this.setMessages(contactMessages);
         this.stopSpinner();
       });
