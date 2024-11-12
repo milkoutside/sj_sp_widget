@@ -4,7 +4,7 @@ export const ContactsModule = {
         zohoContact: {},
     }),
     mutations: {
-        setContact(state, zohoContact) {
+        seZohotContact(state, zohoContact) {
             state.zohoContact = zohoContact;
         }
     },
