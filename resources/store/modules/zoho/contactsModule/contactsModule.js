@@ -1,11 +1,11 @@
 import axios from 'axios';
 export const ContactsModule = {
     state: () => ({
-        contact: {},
+        zohoContact: {},
     }),
     mutations: {
-        setContact(state, contact) {
-            state.contact = contact;
+        setContact(state, zohoContact) {
+            state.zohoContact = zohoContact;
         }
     },
     actions:{
