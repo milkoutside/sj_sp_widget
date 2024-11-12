@@ -30,7 +30,7 @@ export default {
     ...mapMutations({
       startSpinner: 'spinner/startSpinner',
       stopSpinner: 'spinner/stopSpinner',
-      setContact:'zoho/contacts/setContact',
+      seZohotContact:'zoho/contacts/seZohotContact',
       setMessages:'repositories/contacts/setMessages'
     }),
     async init() {
