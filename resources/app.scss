@@ -1,0 +1,102 @@
+@import "~sweetalert2/dist/sweetalert2.min.css";
+
+.swal2-actions:not(.swal2-loading) .swal2-styled:hover {
+    background-image: none;
+}
+
+@import '~vuetify/dist/vuetify.min.css';
+
+
+.v-navigation-drawer .v-list-item {
+    padding-right: 26px;
+    transition: .3s padding;
+}
+
+.v-navigation-drawer--mini-variant .v-list-item {
+    padding-left: 8px;
+
+    & > :not(:first-child) {
+        position: unset !important;
+        height: unset;
+        width: unset;
+        clip: unset;
+    }
+}
+
+.v-dialog > .v-card {
+    & > .v-card__subtitle,
+    & > .v-card__text {
+        padding: 28px 24px 24px;
+    }
+}
+
+.v-simple-checkbox {
+    display: flex;
+}
+
+.v-btn__content {
+    transform: translateY(1px);
+}
+
+.v-btn__content .v-icon {
+    transform: translateY(-1px);
+}
+
+.v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--outlined.v-text-field--btn-appended {
+    .v-input__append-inner > .v-btn {
+        margin-top: -6px;
+        margin-right: -6px;
+    }
+}
+.v-text-field__slot textarea {
+    padding-bottom: 6px;
+}
+
+.v-input--selection-controls__input div {
+    color: #1976d2 !important
+}
+
+.v-treeview-node__root {
+    padding-right: 0 !important;
+}
+
+.v-list--flat.v-list--no-active {
+    .v-list-item:before {
+        display: block;
+    }
+
+    .theme--light.v-list-item--active:before {
+        opacity: 0;
+    }
+
+    .theme--light.v-list-item--active:hover:before {
+        opacity: 0.4;
+    }
+
+    .v-list-item--active .theme--light.v-icon {
+        color: rgba(0,0,0,.54);
+    }
+}
+
+html,
+body {
+    font-family: Roboto, sans-serif;
+    height: 100% !important;
+    //background: #f8f8f8;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 650px;
+}
+
+.spinner-fixed {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
